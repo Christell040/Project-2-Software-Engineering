@@ -1,0 +1,10 @@
+SELECT public.calc_outstanding_fee(100)
+SELECT * FROM student_fees
+SELECT public.calc_outstanding_fee(101)
+SELECT public.calc_outstanding_fee(102)
+SELECT public.calc_outstanding_fee(103)
+SELECT * FROM student_fees 
+SELECT row_to_json(row(student_id, outstanding_fees)) FROM student_fees; 
+SELECT public.calc_outstanding_fee(
+	<studentid integer>
+)
